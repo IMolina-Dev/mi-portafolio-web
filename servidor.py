@@ -1,12 +1,14 @@
-from flask import Flask, request send_from_directory
+from flask import Flask, request, send_from_directory
 import smtplib
 from email.message import EmailMessage
 
 app = Flask(__name__, static_folder='.', static_url_path='')
+
 @app.route('/')
 def inicio():
     return send_from_directory('.', 'index.html')
-    @app.route('/<path:nombre_archivo>')
+
+@app.route('/<path:nombre_archivo>')
 def archivos(nombre_archivo):
     return send_from_directory('.', nombre_archivo)
 
