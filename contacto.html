@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Portafolio Creativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Estilos.css">
+</head>
+<body>
+
+    <nav class="menu-navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Mis Obras</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <h1>Trabajemos Juntos</h1>
+
+    <div class="contenedor-contacto">
+        <p class="subtitulo-contacto">¿Tienes un proyecto en mente o una oferta laboral? Envíame un mensaje y te responderé lo antes posible.</p>
+
+        <form action="http://localhost:5000/enviar" method="POST" class="formulario">
+            
+            <div class="grupo-input">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="mensaje">Tu mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu propuesta..." required></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
