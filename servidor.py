@@ -18,15 +18,12 @@ def enviar_correo():
     correo_reclutador = request.form.get('correo')
     mensaje_reclutador = request.form.get('mensaje')
 
-    
     print("\n" + "="*50)
     print("💼 ¡NUEVO MENSAJE DE TRABAJO RECIBIDO!")
     print(f"👤 De: {nombre} ({correo_reclutador})")
     print(f"📝 Mensaje: {mensaje_reclutador}")
     print("="*50 + "\n")
 
-   
-    
     '''
     try:
         msg = EmailMessage()
@@ -45,7 +42,6 @@ def enviar_correo():
         print("Error al enviar el correo:", e)
     '''
 
-    
     return """
     <body style="background-color: #e0cdb5; text-align: center; font-family: 'Montserrat', sans-serif;">
         <h1 style="color: #2c3e50; margin-top: 100px;">¡Mensaje enviado con éxito!</h1>
@@ -55,5 +51,4 @@ def enviar_correo():
     """
 
 if __name__ == '__main__':
-    
     app.run(port=5000)
